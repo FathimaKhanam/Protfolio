@@ -284,6 +284,36 @@ textarea{min-height:110px;resize:vertical}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
 .reveal.in{opacity:1;transform:none}
 
+
+/* ===== ShoWay spotlight ===== */
+.sw{background:linear-gradient(135deg,#1b2033 0%,#2a2540 55%,#3b2b3f 100%);color:#e7e3f0;border-radius:32px;padding:44px;position:relative;overflow:hidden;box-shadow:0 30px 60px rgba(27,32,51,.28)}
+.sw::before{content:'';position:absolute;right:-90px;top:-90px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(185,138,62,.35),rgba(185,138,62,0) 70%)}
+.sw-head{display:flex;gap:22px;align-items:center;flex-wrap:wrap;position:relative}
+.sw-logo{width:92px;height:92px;border-radius:22px;background:#fff;padding:6px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.sw-tag{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.12em;color:#d9bd8d;text-transform:uppercase}
+.sw-tag i{width:7px;height:7px;border-radius:50%;background:#2f9e5f}
+.sw h2{color:#fff;margin:4px 0 4px;font-size:clamp(1.9rem,4vw,2.8rem)}
+.sw .role{color:#d9bd8d;font-weight:600;font-size:1rem}
+.sw-lead{position:relative;max-width:720px;margin:22px 0 26px;color:#cfcbe0;font-size:1rem}
+.sw-lead b{color:#fff}
+.sw-grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.sw-box{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:20px;transition:transform .3s,background .3s}
+.sw-box:hover{transform:translateY(-4px);background:rgba(255,255,255,.12)}
+.sw-box b{display:block;color:#fff;font-size:.98rem;margin-bottom:6px}
+.sw-box span{font-size:.84rem;color:#bdb8d2}
+.sw-box .n{font-family:var(--serif);color:#d9bd8d;font-size:.9rem;margin-bottom:8px;display:block}
+.sw-stats{position:relative;display:flex;gap:34px;flex-wrap:wrap;margin:28px 0 8px}
+.sw-stats div b{display:block;font-family:var(--serif);font-size:2rem;color:#fff;font-weight:500;line-height:1.1}
+.sw-stats div span{font-size:.8rem;color:#bdb8d2}
+.sw-foot{position:relative;display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:24px}
+.sw-foot .plat a{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#fff}
+.sw-note{position:relative;margin-top:22px;padding:14px 18px;border-radius:14px;background:rgba(185,138,62,.14);border:1px solid rgba(185,138,62,.4);font-size:.88rem;color:#f0e3c8}
+.hero-sw{display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:var(--card);border:1px solid var(--line);padding:6px 18px 6px 6px;border-radius:999px;font-size:.84rem;font-weight:600;box-shadow:0 8px 20px rgba(90,61,36,.1);transition:transform .25s}
+.hero-sw:hover{transform:translateY(-2px)}
+.hero-sw img{width:34px;height:34px;border-radius:50%;border:1px solid var(--line)}
+.hero-sw em{font-style:normal;color:var(--gold)}
+@media(max-width:900px){.sw{padding:28px 22px}.sw-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.sw-grid{grid-template-columns:1fr}}
 @media(max-width:1000px){.catalog{grid-template-columns:repeat(2,1fr)}.tools{grid-template-columns:repeat(3,1fr)}.open-badge{display:none}}
 @media(max-width:900px){
   .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--cream);flex-direction:column;padding:20px 24px;gap:16px;border-bottom:1px solid var(--line)}
@@ -306,7 +336,7 @@ textarea{min-height:110px;resize:vertical}
   <div class="wrap nav-in">
     <a href="#top" class="logo"><span class="logo-mark">FK</span>Fathima Khanam</a>
     <div class="nav-links" id="links">
-      <a href="#about">About</a><a href="#sap">SAP</a><a href="#experience">Experience</a>
+      <a href="#about">About</a><a href="#showay">ShoWay</a><a href="#sap">SAP</a><a href="#experience">Experience</a>
       <a href="#projects">Projects</a><a href="#teaching">Teaching</a><a href="#education">Education</a><a href="#tools">Tools</a><a href="#activities">Beyond Work</a>
     </div>
     <span class="open-badge"><i></i>Open to UAE / GCC</span>
@@ -327,6 +357,7 @@ textarea{min-height:110px;resize:vertical}
       <a href="#contact" class="btn btn-line">Get in touch</a>
     </div>
 
+    <a href="#showay" class="hero-sw"><img src="assets/logos/showay.png" alt="ShoWay">Founder &amp; CEO · <em>ShoWay</em> — SAP training platform</a>
     <div class="stage">
       <div class="glow"></div><div class="ring"></div>
       <span class="chip c1"><img src="assets/logos/btp.png" alt="">SAP BTP</span>
@@ -389,6 +420,44 @@ textarea{min-height:110px;resize:vertical}
       <div class="fact"><div class="fi"><img src="assets/logos/sap.png" alt=""></div><div><h4>SAP Labs India</h4><p>Fiori Apps Library team · CAP Java &amp; Node.js</p></div></div>
       <div class="fact"><div class="fi"><img src="https://cdn.simpleicons.org/googlemaps/34A853" alt=""></div><div><h4>Hyderabad, India</h4><p>Open to relocation: UAE / GCC · 60-day notice</p></div></div>
       <div class="fact"><div class="fi"><img src="https://cdn.simpleicons.org/googletranslate/4285F4" alt=""></div><div><h4>Languages</h4><p>English · Hindi · Telugu · Urdu · Arabic (learning)</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SHOWAY SPOTLIGHT ================= -->
+<section id="showay" style="padding-top:0">
+  <div class="wrap">
+    <div class="sw reveal">
+      <div class="sw-head">
+        <img class="sw-logo" src="assets/logos/showay.png" alt="ShoWay">
+        <div>
+          <span class="sw-tag"><i></i>Live · showay.in</span>
+          <h2>ShoWay</h2>
+          <div class="role">Founder &amp; CEO — SAP training &amp; technical content</div>
+        </div>
+      </div>
+      <p class="sw-lead">Alongside my full-time <b>SAP BTP Developer</b> role at SAP Labs India, I <b>founded and run ShoWay</b> — a platform that helps experienced ABAP developers move to the modern SAP BTP stack. I lead the curriculum, create the content, deliver the sessions and mentor the learners.</p>
+      <div class="sw-grid">
+        <div class="sw-box"><span class="n">01</span><b>Curriculum</b><span>Designed a 25-session SAP ABAP-to-BTP programme: CAP (Java &amp; Node.js), CDS, OData V4, Fiori Elements, SAP Build, Cloud Foundry, Git.</span></div>
+        <div class="sw-box"><span class="n">02</span><b>Content</b><span>Hands-on exercises and architecture walkthroughs published on GitHub, YouTube and Udemy.</span></div>
+        <div class="sw-box"><span class="n">03</span><b>Delivery</b><span>Practical, hands-on sessions that take ABAP developers from classic ABAP to cloud deployment.</span></div>
+        <div class="sw-box"><span class="n">04</span><b>Mentoring</b><span>Guiding developers on clean-core architecture, side-by-side extensibility and SAP Activate workflows.</span></div>
+      </div>
+      <div class="sw-stats">
+        <div><b>25</b><span>Sessions in the programme</span></div>
+        <div><b>3</b><span>Channels · GitHub, YouTube, Udemy</span></div>
+        <div><b>2</b><span>Public GitHub repos</span></div>
+        <div><b>2026</b><span>Founded</span></div>
+      </div>
+      <div class="sw-note"><b>Running it alongside my day job:</b> I manage ShoWay end to end next to my SAP Labs delivery work, so every lesson comes from real production experience.</div>
+      <div class="sw-foot">
+        <a class="btn btn-gold" href="https://www.showay.in/" target="_blank" rel="noopener">Visit showay.in →</a>
+        <div class="plat">
+          <a href="https://github.com/FathimaKhanam" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/github/ffffff" alt="">GitHub</a>
+          <a href="https://www.showay.in/" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/youtube/FF0000" alt="">YouTube</a>
+          <a href="https://www.showay.in/" target="_blank" rel="noopener"><img src="assets/logos/udemy.png" alt="" style="filter:brightness(0) invert(1)">Udemy</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
